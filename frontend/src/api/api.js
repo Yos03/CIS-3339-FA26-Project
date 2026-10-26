@@ -1,14 +1,7 @@
 // This file contains all API calls to the API endpoints
 // import axios to make API calls
-import axios from "axios";
+import { apiClient } from '../composables/useApi';
 
-// Create HTTP client with the base URL, and specify that the data sent in the request body is JSON
-const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_ROOT_API,
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
 
 // Login related API calls
 // If user logs in successfully, this login sets a header to "apiClient" called "Authorization" with the value of "Bearer <token>" This security token is used to validate API calls
